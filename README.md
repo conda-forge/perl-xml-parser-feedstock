@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/perl-xml-parser
 
 Home: https://metacpan.org/pod/XML::Parser
 
-Package license: Perl 5
+Package license: Artistic-2.0
 
 Summary: A perl module for parsing XML documents
 
