@@ -1,0 +1,15 @@
+Only in a/inc/Devel: #CheckLib.pm#
+diff -ru a/inc/Devel/CheckLib.pm b/inc/Devel/CheckLib.pm
+--- a/inc/Devel/CheckLib.pm	2016-04-13 05:38:16
++++ b/inc/Devel/CheckLib.pm	2025-04-19 23:13:19
+@@ -328,9 +328,6 @@
+         warn "# @sys_cmd\n" if $args{debug};
+         my $rv = $args{debug} ? system(@sys_cmd) : _quiet_system(@sys_cmd);
+         push @missing, $lib if $rv != 0 || !-x $exefile;
+-        my $absexefile = File::Spec->rel2abs($exefile);
+-        $absexefile = '"' . $absexefile . '"' if $absexefile =~ m/\s/;
+-        push @wrongresult, $lib if $rv == 0 && -x $exefile && system($absexefile) != 0;
+         unlink $ofile if -e $ofile;
+         _cleanup_exe($exefile);
+     }
+Only in b/inc/Devel: CheckLib.pm~
